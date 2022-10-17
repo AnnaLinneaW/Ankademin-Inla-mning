@@ -1,6 +1,8 @@
 let darkBtn=document.querySelector("#dark");
-let myValue=document.querySelector("#mySpan").value;
-console.log(myValue)//Går ej
+let answerBtn=document.querySelector("#myAnswer")
+//let myValue=document.querySelector("[name='quiz']:checked").value;
+let radios = document.querySelectorAll('input[type="radio"]');
+let infoWrapper=document.querySelector("#infoWrapper")
 
 
 clicks=0;
@@ -18,3 +20,11 @@ darkBtn.addEventListener("click", ()=>{
         clicks--;
     }
 });
+
+answerBtn.addEventListener("click",()=>{
+    for (let radio of radios) {
+		if (radio.checked) {
+			infoWrapper.append(radio.value);
+		}
+	}
+})
