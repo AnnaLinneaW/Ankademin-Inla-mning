@@ -21,19 +21,19 @@ darkBtn.addEventListener("click", ()=>{
 });
 
 let points=[];
+let sum = 0;
 answerBtn.addEventListener("click",()=>{
     infoWrapper.innerHTML=""
-    let sum = 0;
     for (let radio of radios) {
         if (radio.checked) {
             points.push(+radio.value);
             for (let i=0; i< points.length; i++){
-                sum += +points[i];
-            }; 
+                sum += points[i]
+            }
 		};
 	};
     infoWrapper.append(sum);
-    console.log(sum);
+    console.log(points);
 });
 
 
