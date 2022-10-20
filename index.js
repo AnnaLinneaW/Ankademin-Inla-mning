@@ -9,7 +9,7 @@ darkBtn.addEventListener("click", ()=>{
     if (clicks===0){
         darkBtn.innerText="Lightmode";
         document.body.style.backgroundColor= "black";
-        document.body.style.color= "white";
+        document.body.style.color= "yellow";
         clicks++;
     }
     else if (clicks===1){
@@ -35,7 +35,12 @@ answerBtn.addEventListener("click",()=>{
     points.forEach(i => {
         sum += i
     });
-    infoWrapper.append(sum);
+    if(sum <50){infoWrapper.style.color= "red";}
+    else if 
+    (sum>50&& sum<75){infoWrapper.style.color="orange"}
+        else
+        {infoWrapper.style.color="green"};
+    infoWrapper.append("Ditt resultat är: "+ sum);
     console.log(points);
 });
 
