@@ -26,15 +26,30 @@ answerBtn.addEventListener("click",()=>{
     infoWrapper.innerHTML=""
     for (let radio of radios) {
         if (radio.checked) {
-            points.push(+radio.value);
-            for (let i=0; i< points.length; i++){
+            points.push(+radio.value)
+           /*  for (let i=0; i< points.length; i++){
                 sum += points[i]
-            }
+            }; */
+            points.forEach(i => {
+                sum += i;
+            });
 		};
 	};
     infoWrapper.append(sum);
     console.log(points);
 });
+
+
+	
+	
+
+
+	
+	
+
+
+
+
 
 
     
