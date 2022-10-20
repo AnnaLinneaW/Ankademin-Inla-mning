@@ -1,6 +1,5 @@
 let darkBtn=document.querySelector("#dark");
 let answerBtn=document.querySelector("#myAnswer")
-//let myValue=document.querySelector("[name='quiz']:checked").value;
 let radios = document.querySelectorAll('input[type="radio"]');
 let infoWrapper=document.querySelector("#infoWrapper")
 
@@ -22,9 +21,29 @@ darkBtn.addEventListener("click", ()=>{
 });
 
 answerBtn.addEventListener("click",()=>{
+    infoWrapper.innerHTML=""
     for (let radio of radios) {
 		if (radio.checked) {
-			infoWrapper.append(radio.value);
+            let points=[];
+            points.push(+radio.value);
+            let sum = 0;
+            for (let i=0; i< points.length; i++){
+                sum += points[i];
+            }
+            let score=points.flat(1);
+            infoWrapper.append(sum);
+            console.log(score)
 		}
 	}
 })
+//const arr = [5, 15, 45];
+
+//let sum = 0;
+
+//for (let index = 0; index < arr.length; index++) {
+    //sum += arr[index];
+    //}
+    
+    //console.log(sum); // 👉️ 65
+    
+    
