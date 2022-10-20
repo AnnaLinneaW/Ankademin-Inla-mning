@@ -20,22 +20,22 @@ darkBtn.addEventListener("click", ()=>{
     }
 });
 
+let points=[];
 answerBtn.addEventListener("click",()=>{
     infoWrapper.innerHTML=""
+    let sum = 0;
     for (let radio of radios) {
-		if (radio.checked) {
-            let points=[];
+        if (radio.checked) {
             points.push(+radio.value);
-            let score=points.flat(1);
-            let sum = 0;
-            for (let i=0; i< score.length; i++){
-                sum += +score[i];
+            for (let i=0; i< points.length; i++){
+                sum += +points[i];
             }; 
-            infoWrapper.append(score);
-            console.log(score);
 		};
 	};
+    infoWrapper.append(sum);
+    console.log(sum);
 });
+
 
     
     
