@@ -40,7 +40,7 @@ answerBtn.addEventListener("click",()=>{
     (sum>50&& sum<75){infoWrapper.style.color="orange"}
         else
         {infoWrapper.style.color="green"};
-    infoWrapper.append("Ditt resultat är: "+ sum);
+    infoWrapper.append("Du fick: "+ sum+" poäng!");
     console.log(points);
 });
 
