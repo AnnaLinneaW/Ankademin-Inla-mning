@@ -35,9 +35,9 @@ answerBtn.addEventListener("click",()=>{
     points.forEach(i => {
         sum += i
     });
-    if(sum <50){infoWrapper.style.color= "red";}
+    if(sum <5){infoWrapper.style.color= "red";}
     else if 
-    (sum>50&& sum<75){infoWrapper.style.color="orange"}
+    (sum>5&& sum<7.5){infoWrapper.style.color="orange"}
         else
         {infoWrapper.style.color="green"};
     infoWrapper.append("Du fick: "+ sum+" poäng!");
