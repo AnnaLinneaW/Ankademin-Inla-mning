@@ -36,7 +36,7 @@ answerBtn.addEventListener("click",()=>{
         sum += i
     });
     if (points.length<10){
-        alert("Svara på alla frågor")
+        alert("Svara på alla frågor"); 
     }
     else if
     (sum <5){infoWrapper.style.color= "red";}
