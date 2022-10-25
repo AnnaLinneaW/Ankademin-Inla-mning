@@ -8,12 +8,15 @@ clicks=0;
 darkBtn.addEventListener("click", ()=>{
     if (clicks===0){
         darkBtn.innerText="Lightmode";
-        document.body.style.backgroundColor= "black";
-        document.body.style.color= "yellow";
+        document.body.style.backgroundImage= "url('darkwingduck.jpeg')";
+        document.body.style.backgroundRepeat="no-repeat";
+        document.body.style.backgroundSize="120%";
+        document.body.style.color= "red";
         clicks++;
     }
     else if (clicks===1){
         darkBtn.innerText="Darkmode"
+        document.body.style.backgroundImage=""
         document.body.style.backgroundColor= "white";
         document.body.style.color= "black";
         clicks--;
@@ -27,15 +30,16 @@ answerBtn.addEventListener("click",()=>{
     for (let radio of radios) {
         if (radio.checked) {
             points.push(+radio.value)
-           /*  for (let i=0; i< points.length; i++){
-                sum += points[i]
-            }; */
 		};
 	};
     points.forEach(i => {
         sum += i
     });
-    if(sum <5){infoWrapper.style.color= "red";}
+    if (points.length<10){
+        alert("Svara på alla frågor")
+    }
+    else if
+    (sum <5){infoWrapper.style.color= "red";}
     else if 
     (sum>5&& sum<7.5){infoWrapper.style.color="orange"}
         else
