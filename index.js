@@ -11,7 +11,7 @@ darkBtn.addEventListener("click", ()=>{
         document.body.style.backgroundImage= "url('darkwingduck.jpeg')";
         document.body.style.backgroundRepeat="no-repeat";
         document.body.style.backgroundSize="120%";
-        document.body.style.color= "red";
+        document.body.style.color= "#fca311";
         clicks++;
     }
     else if (clicks===1){
