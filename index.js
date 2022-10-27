@@ -48,11 +48,6 @@ answerBtn.addEventListener("click",()=>{
     console.log(points);
 });
 
-
-	
-	
-
-
 	
 	
 
